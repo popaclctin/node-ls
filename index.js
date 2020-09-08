@@ -1,6 +1,7 @@
 #! node
 
 const fs = require("fs");
+const chalk = require("chalk");
 
 const { lstat } = fs.promises;
 
@@ -19,7 +20,11 @@ fs.readdir(process.cwd(), async (err, fileNames) => {
   for (let stat of allStats) {
     const index = allStats.indexOf(stat);
 
-    console.log(fileNames[index], stat.isFile());
+    if (stat.isFile()) {
+      console.log(fileNames[index]);
+    } else {
+      console.log(chalk.blue.bold(fileNames[index]));
+    }
   }
 });
 

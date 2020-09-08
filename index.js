@@ -1,3 +1,5 @@
+#! node
+
 const fs = require("fs");
 
 fs.readdir(process.cwd(), (err, fileNames) => {

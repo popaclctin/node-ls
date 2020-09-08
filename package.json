@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/popaclctin/node-ls/issues"
   },
-  "homepage": "https://github.com/popaclctin/node-ls#readme"
+  "homepage": "https://github.com/popaclctin/node-ls#readme",
+  "bin": {
+    "node-ls": "index.js"
+  }
 }
